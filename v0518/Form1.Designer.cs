@@ -28,12 +28,84 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            player = new Button();
+            leftButton = new Button();
+            downButton = new Button();
+            rightButton = new Button();
+            upButton = new Button();
+            SuspendLayout();
+            // 
+            // player
+            // 
+            player.Location = new Point(333, 205);
+            player.Name = "player";
+            player.Size = new Size(75, 23);
+            player.TabIndex = 0;
+            player.Text = "自分";
+            player.UseVisualStyleBackColor = true;
+            player.Click += button1_Click;
+            // 
+            // leftButton
+            // 
+            leftButton.Location = new Point(12, 336);
+            leftButton.Name = "leftButton";
+            leftButton.Size = new Size(48, 48);
+            leftButton.TabIndex = 1;
+            leftButton.Text = "←";
+            leftButton.UseVisualStyleBackColor = true;
+            leftButton.Click += leftButton_Click;
+            // 
+            // downButton
+            // 
+            downButton.Location = new Point(61, 390);
+            downButton.Name = "downButton";
+            downButton.Size = new Size(48, 48);
+            downButton.TabIndex = 2;
+            downButton.Text = "↓";
+            downButton.UseVisualStyleBackColor = true;
+            downButton.Click += downButton_Click;
+            // 
+            // rightButton
+            // 
+            rightButton.Location = new Point(110, 336);
+            rightButton.Name = "rightButton";
+            rightButton.Size = new Size(48, 48);
+            rightButton.TabIndex = 3;
+            rightButton.Text = "→";
+            rightButton.UseVisualStyleBackColor = true;
+            rightButton.Click += rightButton_Click;
+            // 
+            // upButton
+            // 
+            upButton.Location = new Point(61, 282);
+            upButton.Name = "upButton";
+            upButton.Size = new Size(48, 48);
+            upButton.TabIndex = 4;
+            upButton.Text = "↑";
+            upButton.UseVisualStyleBackColor = true;
+            upButton.Click += upButton_Click;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(upButton);
+            Controls.Add(rightButton);
+            Controls.Add(downButton);
+            Controls.Add(leftButton);
+            Controls.Add(player);
+            Name = "Form1";
+            Text = "Form1";
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Button player;
+        private Button leftButton;
+        private Button downButton;
+        private Button rightButton;
+        private Button upButton;
     }
 }
